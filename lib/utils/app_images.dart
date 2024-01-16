@@ -45,9 +45,9 @@ class Assets {
   /// assets/images/my_investments.svg
   static const String imagesMyInvestments = "assets/images/my_investments.svg";
 
-  /// Assets for imagesMyTransctions
-  /// assets/images/my_transctions.svg
-  static const String imagesMyTransctions = "assets/images/my_transctions.svg";
+  /// Assets for imagesMyTransactions
+  /// assets/images/my_transactions.svg
+  static const String imagesMyTransactions = "assets/images/my_transactions.svg";
 
   /// Assets for imagesSettings
   /// assets/images/settings.svg
