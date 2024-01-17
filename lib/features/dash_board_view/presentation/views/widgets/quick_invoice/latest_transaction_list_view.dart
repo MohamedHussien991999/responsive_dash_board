@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/features/dash_board_view/data/models/user_info_model.dart';
-import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/user_info_list_tile.dart';
+import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/drawer/user_info/user_info_list_tile.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 
 class LatestTransactionListView extends StatelessWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/features/dash_board_view/data/models/all_expenses_item_model.dart';
-import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/all_expenses_item_header.dart';
+import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/all_expenses/all_expenses_item_header.dart';
 import 'package:responsive_dash_board/utils/app_style.dart';
 
-class ActiveAllExpensesItem extends StatelessWidget {
-  const ActiveAllExpensesItem({
+class InActiveAllExpensesItem extends StatelessWidget {
+  const InActiveAllExpensesItem({
     super.key,
     required this.itemModel,
   });
@@ -16,9 +16,9 @@ class ActiveAllExpensesItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: ShapeDecoration(
-        color: const Color(0xFF4DB7F2),
+        color: Colors.white,
         shape: RoundedRectangleBorder(
-          side: const BorderSide(width: 1, color: Color(0xFF4DB7F2)),
+          side: const BorderSide(width: 1, color: Color(0xFFF1F1F1)),
           borderRadius: BorderRadius.circular(12),
         ),
       ),
@@ -26,8 +26,6 @@ class ActiveAllExpensesItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AllExpensesItemHeader(
-            imageBackground: Colors.white.withOpacity(0.10000000149011612),
-            imageColor: Colors.white,
             image: itemModel.image,
           ),
           const SizedBox(
@@ -37,9 +35,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               itemModel.title,
-              style: AppStyles.styleMedium16.copyWith(
-                color: Colors.white,
-              ),
+              style: AppStyles.styleMedium16,
             ),
           ),
           const SizedBox(
@@ -49,9 +45,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               itemModel.date,
-              style: AppStyles.styleRegular14.copyWith(
-                color: const Color(0xFFFAFAFA),
-              ),
+              style: AppStyles.styleRegular14,
             ),
           ),
           const SizedBox(
@@ -61,7 +55,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               itemModel.price,
-              style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+              style: AppStyles.styleSemiBold24,
             ),
           ),
         ],

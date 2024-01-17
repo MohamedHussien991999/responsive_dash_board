@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/all_expenses.dart';
-import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/custom_drawer.dart';
+import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/all_expenses/all_expenses.dart';
+import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/drawer/custom_drawer.dart';
 import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/quick_invoice/quick_invoice.dart';
 
 class DesktopDashBoardView extends StatelessWidget {
