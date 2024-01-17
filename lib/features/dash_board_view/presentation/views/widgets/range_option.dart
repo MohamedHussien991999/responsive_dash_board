@@ -9,15 +9,20 @@ class RangeOptions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(12),
-      decoration: ShapeDecoration(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          side: const BorderSide(width: 1, color: Color(0xFFF1F1F1)),
-          borderRadius: BorderRadius.circular(12),
+        padding: const EdgeInsets.all(12),
+        decoration: ShapeDecoration(
+          color: Colors.white,
+          shape: RoundedRectangleBorder(
+            side: const BorderSide(width: 1, color: Color(0xFFF1F1F1)),
+            borderRadius: BorderRadius.circular(12),
+          ),
         ),
-      ),
-      child: const CustomDropDownButton()
-    );
+        child: const CustomDropDownButton(
+          items: [
+            'Daily',
+            'Weekly',
+            'Monthly',
+          ],
+        ));
   }
 }

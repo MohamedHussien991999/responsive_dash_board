@@ -18,14 +18,20 @@ class DesktopDashBoardView extends StatelessWidget {
           width: 32,
         ),
         Expanded(
-          child: Column(
-            children: [
-              AllExpenses(),
-              SizedBox(
-                height: 24,
-              ),
-            QuickInvoice(),
-            ],
+          flex: 2,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  width: 40,
+                ),
+                AllExpenses(),
+                SizedBox(
+                  height: 24,
+                ),
+                QuickInvoice(),
+              ],
+            ),
           ),
         )
       ],

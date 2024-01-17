@@ -2,24 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_style.dart';
 
 class CustomDropDownButton extends StatefulWidget {
-  const CustomDropDownButton({super.key});
-
+   const CustomDropDownButton({super.key, required this.items});
+  final List<String> items;
   @override
   State<CustomDropDownButton> createState() => _CustomDropDownButtonState();
 }
 
 class _CustomDropDownButtonState extends State<CustomDropDownButton> {
-  final List<String> items = [
-    'Daily',
-    'Weekly',
-    'Monthly',
-  ];
+
   String? selectedValue;
   @override
   Widget build(BuildContext context) {
     return DropdownButton(
       items: convertIListToMap(),
-      value: selectedValue ?? items[0],
+      value: selectedValue ?? widget.items[0],
       onChanged: (String? value) {
         selectedValue = value;
         setState(() {});
@@ -36,7 +32,7 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
   }
 
   List<DropdownMenuItem<String>> convertIListToMap() {
-    return items.map<DropdownMenuItem<String>>((String value) {
+    return widget.items.map<DropdownMenuItem<String>>((String value) {
       return DropdownMenuItem<String>(
         value: value,
         child: Padding(
