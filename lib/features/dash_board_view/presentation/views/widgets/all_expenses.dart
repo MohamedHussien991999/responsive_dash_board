@@ -9,13 +9,13 @@ class AllExpenses extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomBackgroundContainer(
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: AllExpensesHeader(),
-          ),
-          AllExpensesItemsListView(),
-    
+      child: Column(
+        children: [
+            AllExpensesHeader(),
+                SizedBox(
+                  height: 16,
+                ),
+         AllExpensesItemsListView()
         ],
       ),
     );

@@ -33,28 +33,24 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return SliverGrid.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
-        crossAxisSpacing: 12,
-        
-        
-      ),
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return GestureDetector(
-          onTap: () {
-            updateIndex(index);
-          },
-          child: Padding(
-            padding: const EdgeInsets.only(top: 16),
-            child: AllExpensesItem(
-              isSelected: selectedIndex == index,
-              itemModel: items[index],
+    return Row(
+      children: items.asMap().entries.map((e) {
+        int index = e.key;
+        var item = e.value;
+      
+        return Expanded(
+          child: GestureDetector(
+            onTap: () => updateIndex(index),
+            child: Padding(
+              padding:  EdgeInsets.symmetric(horizontal: index ==1 ? 12 : 0),
+              child: AllExpensesItem(
+                itemModel: item,
+                isSelected: selectedIndex == index,
+              ),
             ),
           ),
         );
-      },
+      }).toList(),
     );
   }
 
