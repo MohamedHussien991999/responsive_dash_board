@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/custom_button.dart';
-import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/custom_drop_down_button.dart';
-import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/quick_invoice/custom_drop_down_button_quick_invoice.dart';
-import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/quick_invoice/title_text_field.dart';
+import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/all_expenses_and_quick_invoice_section/quick_invoice/custom_button.dart';
+import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/all_expenses_and_quick_invoice_section/quick_invoice/custom_drop_down_button_quick_invoice.dart';
+import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/all_expenses_and_quick_invoice_section/quick_invoice/title_text_field.dart';
 
 class QuickInvoiceForm extends StatelessWidget {
   const QuickInvoiceForm({super.key});

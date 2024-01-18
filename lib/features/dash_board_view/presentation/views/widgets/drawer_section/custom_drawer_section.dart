@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/features/dash_board_view/data/models/drawer_item_model.dart';
 import 'package:responsive_dash_board/features/dash_board_view/data/models/user_info_model.dart';
-import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/drawer/drawer_item_list_view.dart';
-import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/drawer/in_active_drawer_item.dart';
-import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/drawer/user_info/user_info_list_tile.dart';
+import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/drawer_section/drawer_item_list_view.dart';
+import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/drawer_section/in_active_drawer_item.dart';
+import 'package:responsive_dash_board/features/dash_board_view/presentation/views/widgets/drawer_section/user_info/user_info_list_tile.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 
-class CustomDrawer extends StatelessWidget {
-  const CustomDrawer({super.key});
+class CustomDrawerSection extends StatelessWidget {
+  const CustomDrawerSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +17,11 @@ class CustomDrawer extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
             child: UserInfoListTile(
-             userInfoModel: UserInfoModel(
+              userInfoModel: UserInfoModel(
                 title: "Leak Kokomo",
                 subTitle: 'demo@gmail.com',
                 image: Assets.imagesAvatar3,
-              ), 
+              ),
             ),
           ),
           SliverToBoxAdapter(
