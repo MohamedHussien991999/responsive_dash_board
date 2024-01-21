@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_style.dart';
 
 class CustomDropDownButton extends StatefulWidget {
-   const CustomDropDownButton({super.key, required this.items});
+  const CustomDropDownButton({super.key, required this.items});
   final List<String> items;
   @override
   State<CustomDropDownButton> createState() => _CustomDropDownButtonState();
 }
 
 class _CustomDropDownButtonState extends State<CustomDropDownButton> {
-
   String? selectedValue;
   @override
   Widget build(BuildContext context) {
@@ -35,12 +34,9 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
     return widget.items.map<DropdownMenuItem<String>>((String value) {
       return DropdownMenuItem<String>(
         value: value,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            value,
-            style: AppStyles.styleMedium16,
-          ),
+        child: Text(
+          value,
+          style: AppStyles.styleMedium16,
         ),
       );
     }).toList();
