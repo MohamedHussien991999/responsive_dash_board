@@ -14,7 +14,6 @@ class IncomeBody extends StatelessWidget {
           child: IncomeChart(),
         ),
         Expanded(
-          flex: 2,
           child: IncomeFlowChartDetails(),
         ),
       ],

@@ -10,7 +10,6 @@ class IncomeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomBackgroundContainer(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           IncomeSectionHeader(),
           SizedBox(
