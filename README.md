@@ -1,16 +1,65 @@
 # responsive_dash_board
+Responsive Dash Board is a mobile application developed using Flutter. It supports both Android and IOS.
 
-A new Flutter project.
+Responsive Dash Board is a controll for your app  .
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Table of contents
+- ### [main packages used =>](#main-packages-used)
+- ### [Folder structure =>](#folder-structure)
+- ### [Demo video =>](#demo-video)
 
-A few resources to get you started if this is your first Flutter project:
+## Main packages used
+ expandable_page_view: (For Expandable Page View That make hight and width is suitable fot item)
+  fl_chart:(For Flow Chart)
+  device_preview: (Display Application in Different apps )
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Folder structure
+We have applied clean archeticture concept and here is the basic folder structure:
+
+core folder structure that flutter provides:
+
+```
+responsive_dash_board
+├── android
+├── assets
+├── build
+├── ios
+├── lib
+└── test
+```
+
+Here is the folder structure we have been using in this project:
+```
+lib
+├── utils
+├── features
+└── main.dart
+```
+
+
+### features
+This folder containes :
+1) (views->  everything related to the screen of the application).
+2) (data -> for Models ).
+```
+features
+├── dash_board_view ├── data ├── models
+         ├── presentation   ├── views  ├── widgets
+                           
+
+
+```
+
+
+## Demo Video
+
+
+
+https://github.com/MohamedHussien991999/bookly_app/assets/93053169/36ae52e0-ee9f-445c-8a25-062c0267b2a2
+
+
+
+
+
