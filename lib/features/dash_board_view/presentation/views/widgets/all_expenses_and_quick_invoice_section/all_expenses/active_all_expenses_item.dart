@@ -37,7 +37,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               itemModel.title,
-              style: AppStyles.styleMedium16.copyWith(
+              style: AppStyles.styleMedium16(context).copyWith(
                 color: Colors.white,
               ),
             ),
@@ -49,7 +49,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               itemModel.date,
-              style: AppStyles.styleRegular14.copyWith(
+              style: AppStyles.styleRegular14(context).copyWith(
                 color: const Color(0xFFFAFAFA),
               ),
             ),
@@ -61,7 +61,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               itemModel.price,
-              style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+              style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
             ),
           ),
         ],

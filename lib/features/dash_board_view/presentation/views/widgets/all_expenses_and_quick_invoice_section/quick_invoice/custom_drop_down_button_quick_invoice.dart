@@ -22,9 +22,9 @@ class _CustomDropDownButtonQuickInvoiceState
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+         Text(
           "Item mount",
-          style: AppStyles.styleMedium16,
+          style: AppStyles.styleMedium16(context),
         ),
         const SizedBox(
           height: 12,
@@ -55,7 +55,7 @@ class _CustomDropDownButtonQuickInvoiceState
               return items.map((String value) {
                 return Text(
                   selectedValue ?? "Select an item",
-                  style: AppStyles.styleMedium16.copyWith(
+                  style: AppStyles.styleMedium16(context).copyWith(
                     color: const Color(0xFF064061),
                   ),
                 );
@@ -81,7 +81,7 @@ class _CustomDropDownButtonQuickInvoiceState
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(value,
-              style: AppStyles.styleMedium16.copyWith(
+              style: AppStyles.styleMedium16(context).copyWith(
                 color: const Color(0xFF064061),
               )),
         ),

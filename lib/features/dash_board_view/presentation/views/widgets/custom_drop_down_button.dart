@@ -36,7 +36,7 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
         value: value,
         child: Text(
           value,
-          style: AppStyles.styleMedium16,
+          style: AppStyles.styleMedium16(context),
         ),
       );
     }).toList();

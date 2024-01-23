@@ -35,7 +35,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               itemModel.title,
-              style: AppStyles.styleMedium16,
+              style: AppStyles.styleMedium16(context),
             ),
           ),
           const SizedBox(
@@ -45,7 +45,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               itemModel.date,
-              style: AppStyles.styleRegular14,
+              style: AppStyles.styleRegular14(context),
             ),
           ),
           const SizedBox(
@@ -55,7 +55,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               itemModel.price,
-              style: AppStyles.styleSemiBold24,
+              style: AppStyles.styleSemiBold24(context),
             ),
           ),
         ],
