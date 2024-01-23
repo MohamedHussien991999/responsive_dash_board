@@ -17,21 +17,22 @@ class _DashBoardViewState extends State<DashBoardView> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
   @override
-  Widget build(BuildContext context) {  
-      SizeConfig.init(context);
+  Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return Scaffold(
-        appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
+      key: scaffoldKey,
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? AppBar(
               elevation: 0,
               backgroundColor: const Color(0xFFFAFAFA),
               leading: IconButton(
                   onPressed: () {
-                      scaffoldKey.currentState!.openDrawer();
+                    scaffoldKey.currentState!.openDrawer();
                   },
                   icon: const Icon(Icons.menu)),
             )
           : null,
-           drawer: MediaQuery.sizeOf(context).width < SizeConfig.tablet
+      drawer: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? const CustomDrawerSection()
           : null,
       backgroundColor: const Color(0xFFF7F9FA),
