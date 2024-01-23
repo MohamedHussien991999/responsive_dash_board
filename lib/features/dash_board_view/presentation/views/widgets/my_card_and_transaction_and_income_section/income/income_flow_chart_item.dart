@@ -18,15 +18,13 @@ class IncomeFlowChartItem extends StatelessWidget {
           shape: const OvalBorder(),
         ),
       ),
-      title: Text(
-        itemFlowChartDetailsModel.title,
-        style: AppStyles.styleRegular16(context).copyWith(
-          color: const Color(0xFF064060),
-        )
-      ),
+      title: Text(itemFlowChartDetailsModel.title,
+          style: AppStyles.styleRegular16(context).copyWith(
+            color: const Color(0xFF064060),
+          )),
       trailing: Text(
         itemFlowChartDetailsModel.value,
-        style:AppStyles.styleMedium16(context).copyWith(
+        style: AppStyles.styleMedium16(context).copyWith(
           color: const Color(0xFF208CC8),
         ),
       ),

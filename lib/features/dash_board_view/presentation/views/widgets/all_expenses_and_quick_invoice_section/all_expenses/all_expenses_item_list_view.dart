@@ -33,24 +33,43 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
+    // because we have only 3 items else we can use Another code in below
     return Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-      
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
-            onTap: () => updateIndex(index),
-            child: Padding(
-              padding:  EdgeInsets.symmetric(horizontal: index ==1 ? 12 : 0),
-              child: AllExpensesItem(
-                itemModel: item,
-                isSelected: selectedIndex == index,
-              ),
+            onTap: () => updateIndex(0),
+            child: AllExpensesItem(
+              itemModel: items[0],
+              isSelected: selectedIndex == 0,
             ),
           ),
-        );
-      }).toList(),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () => updateIndex(1),
+            child: AllExpensesItem(
+              itemModel: items[1],
+              isSelected: selectedIndex == 1,
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () => updateIndex(2),
+            child: AllExpensesItem(
+              itemModel: items[2],
+              isSelected: selectedIndex == 2,
+            ),
+          ),
+        ),
+      ],
     );
   }
 
@@ -60,3 +79,25 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
     });
   }
 }
+
+// ----------> Another Code If we have more than 3 items <----------
+
+    // return Row(
+    //   children: items.asMap().entries.map((e) {
+    //     int index = e.key;
+    //     var item = e.value;
+      
+    //     return Expanded(
+    //       child: GestureDetector(
+    //         onTap: () => updateIndex(index),
+    //         child: Padding(
+    //           padding:  EdgeInsets.symmetric(horizontal: index ==1 ? 12 : 0),
+    //           child: AllExpensesItem(
+    //             itemModel: item,
+    //             isSelected: selectedIndex == index,
+    //           ),
+    //         ),
+    //       ),
+    //     );
+    //   }).toList(),
+    // );
