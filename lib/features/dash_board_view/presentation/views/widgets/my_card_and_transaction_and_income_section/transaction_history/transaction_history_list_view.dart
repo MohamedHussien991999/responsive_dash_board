@@ -3,7 +3,6 @@ import 'package:responsive_dash_board/features/dash_board_view/presentation/view
 
 import '../../../../../data/models/transaction_model.dart';
 
-
 class TransactionHistoryListView extends StatelessWidget {
   const TransactionHistoryListView({super.key});
 
@@ -26,6 +25,7 @@ class TransactionHistoryListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
+    //because of the sliver fill remaining don't use to use listView instead it
     return Column(
       children: items.map((e) => TransactionItem(transactionModel: e)).toList(),
     );
@@ -33,7 +33,7 @@ class TransactionHistoryListView extends StatelessWidget {
     //     itemCount: items.length,
     //     shrinkWrap: true,
     //     itemBuilder: (context, index) {
-    //       return TransctionItem(
+    //       return TransactionItem(
     //         transactionModel: items[index],
     //       );
     //     });
